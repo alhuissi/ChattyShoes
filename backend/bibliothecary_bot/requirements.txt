@@ -1,0 +1,5 @@
+functions-framework==3.*
+openai
+pinecone-client[grpc]==2.2.1
+flask
+beautifulsoup4

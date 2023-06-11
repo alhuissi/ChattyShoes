@@ -1,0 +1,119 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+h1 {
+  font-size: 70px;
+  font-weight: 600;
+  line-height: 1;
+}
+
+h3 {
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 1.6;
+}
+
+.spotlight__wrapper {
+  border-radius: 12px;
+  border: 1px solid #dfe1e5;
+  margin: auto;
+  max-width: 600px;
+  background-color: #fff;
+}
+
+.spotlight__wrapper:hover,
+.spotlight__wrapper:focus {
+  background-color: #fff;
+  box-shadow: 0 1px 6px rgb(32 33 36 / 28%);
+  border-color: rgba(223, 225, 229, 0);
+}
+
+.spotlight__input {
+  display: block;
+  height: 50px;
+  width: 100%;
+  margin-top: 10px;
+  padding-bottom: 10px;
+  outline: none;
+  font-size: 1rem;
+  color: #000;
+  background-position: left 17px center;
+  background-repeat: no-repeat;
+  background-color: #fff;
+  background-size: 3.5%;
+  padding-left: 90px;
+  background-size: contain;
+}
+
+.spotlight__input::placeholder {
+  line-height: 1.5em;
+}
+
+.spotlight__answer {
+  min-height: 200px;
+  min-width: 500px;
+  line-height: 1.5em;
+  letter-spacing: 0.1px;
+  padding: 10px 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spotlight__answer p::after {
+  content: "";
+  width: 2px;
+  height: 14px;
+  position: relative;
+  top: 2px;
+  left: 2px;
+  background: black;
+  display: inline-block;
+  animation: cursor-blink 1s steps(2) infinite;
+}
+
+@media (max-width: 400px) {
+  .spotlight__answer {
+    font-size: 0.7rem;
+    min-width: 200px;
+  }
+
+  .spotlight__input {
+    font-size: 0.7rem;
+    word-break: break-all;
+    max-width: 300px;
+  }
+}
+
+@keyframes cursor-blink {
+  0% {
+    opacity: 0;
+  }
+}
+
+@supports (font-variation-settings: normal) {
+  html {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+  }
+}
+
+.app {
+  @apply relative w-full overflow-hidden;
+}
+
+.home {
+  @apply w-fit xl:h-full flex text-left items-start flex-col xl:py-36 sm:p-8 max-xl:gap-7 z-10;
+}
+
+.home-content {
+  @apply flex-1 flex flex-col mt-12 md:mt-0;
+}

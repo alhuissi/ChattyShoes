@@ -1,0 +1,6 @@
+openai
+firebase-admin
+functions-framework
+requests
+google-auth
+tiktoken
